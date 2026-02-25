@@ -1,4 +1,6 @@
-"""In whisper architecture before the data is passed to the encoder it is converted to mel log spectrogram which is a freq vs time representation in which freq is on mel scale which mimics human hearing. The values represent log energy (in dB) and by color we show the amplitude. In this code we take our audio data and convert it to mel spectrogram to feed it into whisper. Tiny needs 80 mel bins and Large V3 needs 128 mel bins."""
+"""In whisper architecture before the data is passed to the encoder it is converted to mel log spectrogram which is a freq vs time representation in which
+freq is on mel scale which mimics human hearing. The values represent log energy (in dB) and by color we show the amplitude. In this code we take our audio data
+and convert it to mel spectrogram to feed it into whisper. Tiny needs 80 mel bins and Large V3 needs 128 mel bins."""
 
 import whisper
 import torch
