@@ -1,4 +1,8 @@
-"""In this code we first generate probability distribution of each draft token using Large V3 model in ONE forward pass, not the token itself but its probability distribution. Large V3 distribution is p(x) and Tiny distribution is q(x). We calculate acceptance ratio = p/q and sample u from uniform distribution, if min(1, ratio) >= u the token is accepted and optionally we can also generate the next token from Large V3. If rejected we sample a corrected token from adjusted distribution clamp(p-q, min=0) and stop accepting further draft tokens. Then Large V3 predicts the next token and the whole draft generation process starts again."""
+"""In this code we first generate probability distribution of each draft token using Large V3 model in ONE forward pass, not the token itself but its 
+probability distribution. Large V3 distribution is p(x) and Tiny distribution is q(x). We calculate acceptance ratio = p/q and sample u from uniform distribution, 
+if min(1, ratio) >= u the token is accepted and optionally we can also generate the next token from Large V3. If rejected we sample a corrected token from
+adjusted distribution clamp(p-q, min=0) and stop accepting further draft tokens. Then Large V3 predicts the next token and the whole draft generation process 
+starts again."""
 
 import torch
 from draft import logits_to_probs
