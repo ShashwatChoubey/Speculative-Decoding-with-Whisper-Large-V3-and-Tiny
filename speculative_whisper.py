@@ -1,4 +1,7 @@
-"""In this code we define the SpeculativeWhisper class which brings together all the previous functions to give the final output. We load both Tiny and Large V3 models and the tokenizer. For each audio file we convert it to mel spectrogram, encode it with both models, then run the speculative decoding loop which keeps calling draft and verify until EOT is generated or max tokens is reached. After decoding we remove special tokens like SOT and EOT from the final token list as they cause problems in the output text. We also support multiple audio files by looping through them one by one."""
+"""In this code we define the SpeculativeWhisper class which brings together all the previous functions to give the final output. We load both Tiny and 
+Large V3 models and the tokenizer. For each audio file we convert it to mel spectrogram, encode it with both models, then run the speculative decoding 
+loop which keeps calling draft and verify until EOT is generated or max tokens is reached. After decoding we remove special tokens like SOT and EOT from 
+the final token list as they cause problems in the output text. We also support multiple audio files by looping through them one by one."""
 
 import torch
 import time
