@@ -1,4 +1,6 @@
-"""In this code we use Whisper Tiny model to produce tokens till gamma (a hyperparameter we take to be 5) and then for each token we store its probability distribution that will be used in speculative decoding to compare to Large V3 model token probability distribution. Softmax is used to calculate the probability distribution. If EOT token is generated it means the entire audio is done so we stop draft generation early."""
+"""In this code we use Whisper Tiny model to produce tokens till gamma (a hyperparameter we take to be 5) and then for each token we store its probability 
+distribution that will be used in speculative decoding to compare to Large V3 model token probability distribution. Softmax is used to calculate the probability
+distribution. If EOT token is generated it means the entire audio is done so we stop draft generation early."""
 
 
 import torch
