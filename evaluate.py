@@ -1,4 +1,6 @@
-""""In this code we use Whisper original transcribe as our baseline reference and run our SpeculativeWhisper on the same audio. WER (Word Error Rate) is calculated as sum of substitutions, deletions and insertions divided by total number of words. We calculate WER of speculative transcript against the standard transcript as reference and also compare time taken by both. Lower WER means speculative decoding is closer to standard output."""
+""""In this code we use Whisper original transcribe as our baseline reference and run our SpeculativeWhisper on the same audio. WER (Word Error Rate) is 
+calculated as sum of substitutions, deletions and insertions divided by total number of words. We calculate WER of speculative transcript against the 
+standard transcript as reference and also compare time taken by both. Lower WER means speculative decoding is closer to standard output."""
 
 
 import time
